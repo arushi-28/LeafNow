@@ -1,0 +1,97 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Leaf Now</title>
+    {% load static %}
+     <link rel="stylesheet"  href="{% static 'bootstrap.css' %}"/> 
+   
+    <style>
+        .hello-msg{
+            font-size:18px;
+            color:#000000;
+            position:top-right;
+            }
+        body{
+            background-image:url({% static "bg.jpg" %}) ;
+           
+            background-color:black;
+            background-repeat: no-repeat;
+        }
+        li{
+            display:inline;
+           
+        
+        }
+        .navbar navbar-expand-lg navbar-light bg-light{
+            border-width : 10px;
+            background-color:Grey;
+            font-size: 20px;
+            
+            
+        }
+        .nav-link{
+            background-color:transparent;
+        }
+        button{
+            border-radius: 12px;
+    		font-size: 30px;
+    		padding: 12px 28px;
+    		margin-top:22%
+        }
+    	.buttonClass{
+    		text-align: center;
+    		}
+        .avatar{
+            width: 100px;
+            height:100px;
+            border-radius: 50%;
+            position: absolute;
+            top: 70px;
+            left: calc(50% - 50px);
+}
+p{
+  color: lightcyan;
+  font-size:25px;
+  font-style:italic;
+}
+    </style>
+</head>
+<body>
+    
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container-fluid">
+          <span style="color:Grey;"><h5>Hello {{request.user}}</h5></span>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              
+              <li >
+                <a class="nav-link" href="about" id="navbarDropdown" >
+                  About Us
+                </a>
+                </li>
+                  
+                  <li><span class='hello-msg'>
+                      <a class="dropdown-item" href="{% url 'logout' %}">Logout</a>
+                    </span></li>
+                
+             
+            </ul>
+          </div>
+        </div>
+      </nav>
+    <div class=buttonClass>
+        <button type="button" onclick="window.location.href='index3'">Sell seeds</button>
+        <button type="button" onclick="window.location.href='index'">Donate seeds</button>
+        <button type="button" onclick="window.location.href='index2'">Buy seeds</button>
+        </div>
+        <p>The idea of introducing green initiatives into the workplace can feel a little daunting at first. And while it may feel overwhelming trying to figure out where to start, there are actually lots of ways we can be more green in the office without bringing the whole forest inside, without huge cost implications and with long-term benefits to your company, employee well-being and future spend.</p>
+    
+</body>
+</html>
