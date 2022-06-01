@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+	<div id="box">
+		<img id="succes-icon" src="{% static 'check.png' %}">
+		<h4>Thank you for your contribution of Rs{{amount}}!</h4>
+		<p>There are people who don’t donate because they assume everyone else is, and there are those who take up the torch and run with it. Thank you for being the latter, and for your kind and heartwarming donation.</p>
+		<hr>
+		<a class="myButton" href="{% url 'index' %}">&#x2190;Back to donation page</a>
+	</div>
+	
+		<a class="btn-btn-primary m-2" type="button" href=" {% url 'pdf' %}" >Create Pdf</a>
+		{% comment %} <button type="button" class="btn btn-primary" href=" {% url 'pdf' %}" height="30px">Create Pdf</button> {% endcomment %}
+
+{% endblock content %}
